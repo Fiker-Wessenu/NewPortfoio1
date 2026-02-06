@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase - Best Wings Car Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">BEST WINGS</a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="carlist.html" class="nav-link">Our Cars</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Complete Your Purchase</h1>
+        <p class="subtitle">Fill in your details to proceed with the purchase</p>
+
+        <div class="success-message" id="successMessage">
+            Thank you! Your purchase request has been submitted. We'll contact you soon.
+        </div>
+
+        <form id="purchaseForm">
+            <!-- Personal Information Section -->
+            <div class="section-title">Personal Information</div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name <span class="required">*</span></label>
+                    <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                    <label for="lastName">Last Name <span class="required">*</span></label>
+                    <input type="text" id="lastName" name="lastName" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="phone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth <span class="required">*</span></label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+            </div>
+
+            <!-- Address Section -->
+            <div class="section-title">Address Information</div>
+
+            <div class="form-group">
+                <label for="address">Street Address <span class="required">*</span></label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="city">City <span class="required">*</span></label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="state">State <span class="required">*</span></label>
+                    <input type="text" id="state" name="state" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="zipcode">Zip Code <span class="required">*</span></label>
+                    <input type="text" id="zipcode" name="zipcode" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country <span class="required">*</span></label>
+                    <input type="text" id="country" name="country" required>
+                </div>
+            </div>
+
+            <!-- Additional Information Section -->
+            <div class="section-title">Additional Information</div>
+
+            <div class="form-group">
+                <label for="preferences">Vehicle Preferences & Special Requests</label>
+                <textarea id="preferences" name="preferences" placeholder="Tell us about any specific preferences or requests..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Proceed with Purchase</button>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>BEST WINGS CAR SHOP</h3>
+                <p>Your trusted destination for premium automobiles and exceptional service.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="carlist.html">Our Cars</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p>Email: info@bestwings.com</p>
+                <p>Phone: +91 (022) 1234-5678</p>
+                <p>Address: 123 Car Avenue, Mumbai, Maharashtra 400001, India</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Best Wings Car Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('purchaseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Log the data (in a real application, this would be sent to a server)
+            console.log('Purchase Form Data:', data);
+            
+            // Redirect to thank you page
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+</body>
+</html>
